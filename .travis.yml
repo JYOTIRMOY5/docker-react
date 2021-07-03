@@ -2,6 +2,6 @@ sudo: required
 services:
   - docker
 before_install:
-  - docker build JYOTIRMOY5/docker-react -f Dockerfile.dev .
+  - docker build -t JYOTIRMOY5/docker-react -f Dockerfile.dev .
 scripts:
   - docker run -e CI=true JYOTIRMOY5/docker-react npm run test
